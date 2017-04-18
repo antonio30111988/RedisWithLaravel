@@ -95,6 +95,7 @@ return [
 
     'redis' => [
 
+        //'cluster' => false,
         'client' => 'predis',
 
         'default' => [
@@ -102,6 +103,9 @@ return [
             'password' => env('REDIS_PASSWORD', null),
             'port' => env('REDIS_PORT', 6379),
             'database' => 0,
+			
+			//with PHPREDIS
+			//'serializer' => 'igbinary'  
         ],
 
     ],
