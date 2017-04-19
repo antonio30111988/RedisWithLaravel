@@ -13,7 +13,11 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+        //logiranje upita prilikom svakog requesta
+		\DB::listen(function ($event) {
+			dump($event->sql);
+			dump($event->bindings);
+		});
     }
 
     /**

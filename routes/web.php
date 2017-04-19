@@ -35,6 +35,7 @@
 //});
 
 Route::get('/','WelcomeController@index');
+Route::get('/blog','BlogController@showBlog');
 Route::get('/article/{id}','BlogController@showArticle')->where('id','[0-9]+');
 Route::get('/home','HomeController@index');
 
